@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #F3F5FC;
+}
+.logo__header{
+    padding: 10px 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    align-items: center;
+}
+.logo__fjb{
+    width: 70px;
+}
+
+.contenedor_principal{
+    background-color: pink;
+}
+
+
+.flex-row-center{
+    display: flex;
+    flex-flow: row ;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col-center{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col-start{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-col-space{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
