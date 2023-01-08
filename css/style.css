@@ -32,31 +32,47 @@ header{
 
 main{
     height: 80vh;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
-.boton_azul{
+
+
+.boton{
     display: flex;
     flex-direction: row;
     align-items: center;;
     justify-content: center;
     gap: 8px;
     width: 317px;
-    height: 105px;
-    background: #0A3871;
+    height: 80px;
     border-radius: 24px;
     font-size: 30px;
+    margin: 5px;
 }
-.boton_gris{
-    display: flex;
-    flex-direction: row;
-    align-items: center;;
-    justify-content: center;
-    gap: 8px;
-    width: 317px;
-    height: 105px;
-    font-size: 26px;
-    border-radius: 24px;
+    .boton:hover{
+        background: #367dd4;
+        color: white;
+        transform: scale(1.0.5);
+    }
+
+.azul{
+    background: #0A3871;
+    color: #FFFFFF;
 }
+.gris{
+    background-color: transparent;
+    color: #0A3871;
+}
+.p_footer{
+    margin:5px;
+}
+.icon__social_footer {
+    margin:10px;
+}
+.icon__social_footer img{
+    width: 35px;
+}
+
+
 /* modificadores flex */
 .flex-row-center{
     display: flex;
