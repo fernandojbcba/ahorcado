@@ -100,6 +100,40 @@ main{
     flex-flow: column nowrap;
     justify-content: space-evenly;
 }
+
+#seccion_inicio{
+    display: none;
+}
+#seccion_nueva_palabra{
+    display: none;
+}
+.texto{
+    height: 50%;
+    margin: 2% auto 0;
+    display: inline-block;
+    font-size: 32px;
+    color: #183073;
+    border: none;
+    background-color: #F3F5FC ;
+    resize: none;
+    transition: 1s;
+}
+textarea:focus{
+    outline: none !important;  
+    /* !important es para que tome en tus hijos el mismo prop */
+}
+::placeholder{
+    color: darkblue;
+    opacity: 0.5;
+}
+
+.p_maxletras{
+    width: 600px;
+    background-color: aquamarine;
+    justify-items: left;
+}
+
+
 footer{
     height: 10vh;
     background-color: blueviolet;
