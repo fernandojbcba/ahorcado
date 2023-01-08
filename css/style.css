@@ -136,7 +136,9 @@ textarea:focus{
 
 footer{
     height: 10vh;
-    background-color: blueviolet;
+    background: radial-gradient(circle at center, rgb(18, 97, 232), rgb(7, 45, 100),  rgb(3, 30, 70));t;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
 }
 
 
