@@ -122,6 +122,7 @@ main{
     background-color: #F3F5FC ;
     resize: none;
     transition: 1s;
+    text-transform: uppercase;
 }
 textarea:focus{
     outline: none !important;  
@@ -134,7 +135,6 @@ textarea:focus{
 
 .p_maxletras{
     width: 600px;
-    background-color: aquamarine;
     justify-items: left;
 }
 
@@ -144,11 +144,10 @@ footer{
     background: radial-gradient(circle at center, rgb(253, 254, 254), rgb(37, 128, 255),  rgb(37, 128, 255));
     border-top-left-radius: 25%;
     border-top-right-radius: 25%;
+    
 }
 
 
 
 
 
-
-  
