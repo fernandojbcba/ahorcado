@@ -101,12 +101,17 @@ main{
     justify-content: space-evenly;
 }
 
-#seccion_inicio{
+/* #seccion_inicio{
     display: none;
-}
+} */
 #seccion_nueva_palabra{
     display: none;
 }
+#seccion_juego{
+
+    display: none;
+}
+
 .texto{
     height: 50%;
     margin: 2% auto 0;
@@ -136,7 +141,7 @@ textarea:focus{
 
 footer{
     height: 10vh;
-    background: radial-gradient(circle at center, rgb(18, 97, 232), rgb(7, 45, 100),  rgb(3, 30, 70));t;
+    background: radial-gradient(circle at center, rgb(253, 254, 254), rgb(37, 128, 255),  rgb(37, 128, 255));
     border-top-left-radius: 25%;
     border-top-right-radius: 25%;
 }

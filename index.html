@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,18 +25,27 @@
         <main class="flex-col-space">
             <section id="seccion_inicio" class="flex-col-center">
                 <button id="jugar" class="boton azul"> Iniciar juego</button>  
-                <button id="agragar_palabra" class="boton gris">Agregar nueva palabra</button>
+                <button id="agregar_palabra_inicio" class="boton gris">Agregar nueva palabra</button>
             </section>
+
             <section id="seccion_nueva_palabra" class="flex-col-start">
                 <textarea name="nueva_pal" id="nueva_palabra" class="texto" cols="30" rows="15"  placeholder="Ingrese una palabra"></textarea>
-
                 <p class="p_maxletras"><img src="./img/Vector.png"> Max 8 Letras</p>
                 <div class="div_botones flex-row-center">
-                    <button id="agregar_palabra" class="boton azul">Agregar palabra</button>  
+                    <button id="agregar_palabra_nueva" class="boton azul">Agregar palabra</button>  
                     <button id="cancelar" class="boton gris">cancelar</button>
                 </div>
             </section>
 
+            <section id="seccion_juego" class="flex-col-center">
+                <div class="juego_canvas">canvas</div>
+                <div class="juego_letras">letras</div>
+
+                <div class="div_botones flex-row-center">
+                    <button id="jugar" class="boton azul">Juego Nuevo</button>  
+                    <button id="desistir" class="boton gris">Desistir</button>
+                </div>
+            </section>
             
             
         </main>
@@ -53,4 +63,5 @@
 
 
     </body>
+    <script src="js/scripts.js"></script>
 </html>
