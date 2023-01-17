@@ -111,7 +111,10 @@ main{
 
     display: none;
 }
+.juego_canvas{
 
+    background-color: #0A3871;
+}
 .texto{
     height: 50%;
     margin: 2% auto 0;

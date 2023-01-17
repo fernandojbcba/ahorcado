@@ -17,10 +17,10 @@ boton_desistir.addEventListener("click", () => {inicio()});
 
 function crear_juego(){
 
-
     seccion_inicio.style.display = "none";
     seccion_juego.style.display = "flex";
     seccion_nueva_palabra.style.display = "none";
+    patibulo();
 }
 function agregar_palabra(){
     seccion_inicio.style.display = "none";
