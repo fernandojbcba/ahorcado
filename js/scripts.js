@@ -21,6 +21,18 @@ function crear_juego(){
     seccion_juego.style.display = "flex";
     seccion_nueva_palabra.style.display = "none";
     patibulo();
+    window.addEventListener('keydown', (event) => {
+
+        var keyValue = event.key;
+      
+        var codeValue = event.code;
+      
+        console.log("keyValue: " + keyValue);
+      
+        console.log("codeValue: " + codeValue);
+      
+      }, false);
+      
 }
 function agregar_palabra(){
     seccion_inicio.style.display = "none";
