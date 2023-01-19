@@ -13,7 +13,7 @@ boton_inicio_juego.addEventListener("click", () => {crear_juego()});
 boton_agregar_palabra.addEventListener("click", () => {agregar_palabra()});
 boton_cancelar.addEventListener("click", () => {inicio()});
 boton_desistir.addEventListener("click", () => {inicio()});
-
+let nombres=["ORACLE","ALURA","LATAM","ONE"]
 
 function crear_juego(){
 
@@ -21,17 +21,10 @@ function crear_juego(){
     seccion_juego.style.display = "flex";
     seccion_nueva_palabra.style.display = "none";
     patibulo();
-    window.addEventListener('keydown', (event) => {
+    console.log(palabra_aleatoria());
+    window.addEventListener('keydown', captura_letra)
 
-        var keyValue = event.key;
-      
-        var codeValue = event.code;
-      
-        console.log("keyValue: " + keyValue);
-      
-        console.log("codeValue: " + codeValue);
-      
-      }, false);
+       
       
 }
 function agregar_palabra(){
@@ -45,3 +38,15 @@ function inicio(){
     seccion_nueva_palabra.style.display = "none";
 }
 
+function palabra_aleatoria(){
+    
+let aleatorio = nombres[Math.floor(Math.random() * nombres.length)];
+return(aleatorio);
+}
+
+function captura_letra(event){
+  let keyValue = event.key;
+let letra = keyValue;
+console.log(letra);
+    
+}
