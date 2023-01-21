@@ -111,18 +111,31 @@ main{
 
     display: none;
 }
+#gano_perdio{
+    display:none;
+}
 .juego_canvas{
     width: 350px;
-    height: 325px;
-    margin-bottom: 5%;
+    height: 328px;
+    margin-bottom: 1%;
     position: relative;
-    background-color: #0a714d;
     
 }
 .juego_canvas canvas{
     width: 100%;
     height: 100%;
-    background-color: pink;
+}
+.letras_erradas{
+font-size: 32px;
+color: red;
+}
+#winloser{
+    font-size: 32px;
+}
+.juego_letras{
+
+    font-size: 32px;
+    color: #183073;
 }
 .texto{
     height: 50%;
@@ -144,6 +157,15 @@ textarea:focus{
     color: darkblue;
     opacity: 0.5;
 }
+.div_gano_perdio{
+align-items: center;
+align-content: center;
+justify-content: center;
+}
+#gano_perdio_img{
+    width: 350px;
+    height: 350px;
+}
 
 .p_maxletras{
     width: 600px;
@@ -159,7 +181,17 @@ footer{
     
 }
 
+@media screen and (max-width:380px){
 
+    .div_botones{
+        display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    }
+.p_footer{
+    font-size: 10px;
+}
+}
 
 
 

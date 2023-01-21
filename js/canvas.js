@@ -7,6 +7,9 @@ pincel.fillStyle = "black"
     pincel.strokeStyle = "black"
     pincel.lineWidth = 8
 //dibujo horca
+function borra_canvas(){
+    pincel.clearRect(0, 0, pantalla.width, pantalla.height)
+}
 function horca(){
     
     pincel.beginPath();
@@ -72,7 +75,4 @@ pincel.stroke();
 
 }
 
-    
- 
-    
-  
+

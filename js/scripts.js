@@ -1,15 +1,20 @@
 const seccion_inicio = document.querySelector("#seccion_inicio");
 const seccion_nueva_palabra = document.querySelector("#seccion_nueva_palabra");
 const seccion_juego= document.querySelector("#seccion_juego");
+const seccion_gano_perdio= document.querySelector("#gano_perdio")
 
 
 const boton_inicio_juego = document.querySelector("#jugar");
 const boton_agregar_palabra = document.querySelector("#agregar_palabra_inicio");
 const boton_agregar_palabra_nueva = document.querySelector("#agregar_palabra_nueva");
 const boton_cancelar = document.querySelector("#cancelar");
+const juego_nuevo = document.querySelector("#juego_nuevo");
+const juego_nuevo_nuevo = document.querySelector("#juego_nuevo_nuevo");
 const boton_desistir = document.querySelector("#desistir");
 let guiones_text=document.querySelector("#guiones");
 let errados_text=document.querySelector("#errados");
+let winloser_text=document.querySelector("#winloser");
+
 let nombres=["ORACLE","ALURA","LATAM","ONE"];
 let palabraAleatoria_String="";
 let palabraAleatoria_Length = 0;
@@ -20,11 +25,14 @@ let letras_erradas=[];
 let letra_ingresadas=[];
 let palabra_guiones=[];
 let cant_acertadas=0;
+let letra_ingresada=""
 
 boton_inicio_juego.addEventListener("click", () => {crear_juego()});
 boton_agregar_palabra.addEventListener("click", () => {agregar_palabra()});
 boton_cancelar.addEventListener("click", () => {inicio()});
 boton_desistir.addEventListener("click", () => {inicio()});
+juego_nuevo.addEventListener("click", () => {crear_juego()});
+juego_nuevo_nuevo.addEventListener("click", () => {crear_juego()});
 
 
 
@@ -33,6 +41,10 @@ function crear_juego(){
     seccion_inicio.style.display = "none";
     seccion_juego.style.display = "flex";
     seccion_nueva_palabra.style.display = "none";
+    seccion_gano_perdio.style.display="none"
+    borra_canvas();
+    reset();
+
     horca();
     findejuego=false;
     palabraAleatoria_String=(palabra_aleatoria());
@@ -56,11 +68,13 @@ function agregar_palabra(){
     seccion_inicio.style.display = "none";
     seccion_juego.style.display = "none";
     seccion_nueva_palabra.style.display = "flex";
+    seccion_gano_perdio.style.display="none"
 }
 function inicio(){
     seccion_inicio.style.display = "flex";
     seccion_juego.style.display = "none";
     seccion_nueva_palabra.style.display = "none";
+    seccion_gano_perdio.style.display="none"
 }
 
 function palabra_aleatoria(){
@@ -69,7 +83,7 @@ return(aleatorio);
 }
 
 function captura_letra(event){
-let letra_ingresada = event.key;
+letra_ingresada = event.key;
 letra=letra_ingresada.toUpperCase();
 console.log(letra);
 if (verificacionCaracter.test(letra)){
@@ -112,6 +126,12 @@ function guiones_por_letras(){
 function acertadas(){
     if(cant_acertadas==palabraAleatoria_Length){
 console.log("ganaste");
+document.getElementById("gano_perdio_img").src="./img/winner.png";
+seccion_gano_perdio.style.display="flex"
+seccion_inicio.style.display = "none";
+seccion_juego.style.display = "none";
+seccion_nueva_palabra.style.display = "none";
+winloser.textContent = "ganaste" 
 
     }
 
@@ -119,5 +139,22 @@ console.log("ganaste");
 function erradas(){
    if(contadorerrados==6){
     console.log("perdiste");
+    document.getElementById("gano_perdio_img").src="./img/loser.png";
+    seccion_gano_perdio.style.display="flex"
+    seccion_inicio.style.display = "none";
+    seccion_juego.style.display = "none";
+    seccion_nueva_palabra.style.display = "none";
+    winloser.textContent = "PERDISTE" 
+
    }
+}
+
+function reset(){
+    letra_ingresada="";
+    letra_ingresadas=[];
+    guiones_text.textContent=palabra_guiones=[];
+    errados_text.textContent = letras_erradas=[];
+    cant_acertadas=0;
+    contadorerrados=0;
+    palabra_guiones=[];
 }

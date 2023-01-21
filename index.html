@@ -40,22 +40,29 @@
             <section id="seccion_juego" class="flex-col-center">
                 <div class="juego_canvas">
                     <canvas id="ahorcado" height="355" width="355"></canvas>
-                    <div>
-                        <p id="errados">
-
-                        </P>
-                    </div>
+                </div>
+                <div class="letras_erradas">
+                    <p>Letras erradas:</p>
+                    <p id="errados"> </P>
                 </div>
                 <div class="juego_letras">
+                    <p>Palabra Oculta:</p>
                     <p id="guiones"></p>
                 </div>
 
                 <div class="div_botones flex-row-center">
-                    <button id="jugar" class="boton azul">Juego Nuevo</button>  
+                    <button id="juego_nuevo" class="boton azul">Juego Nuevo</button>  
                     <button id="desistir" class="boton gris">Desistir</button>
                 </div>
             </section>
-            
+
+            <section id="gano_perdio" class="flex-col-center">
+                <div class="div_gano_perdio">
+                    <img id="gano_perdio_img"src="./img/loser.png"/>
+                    <p id="winloser"> </P>
+                    <button id="juego_nuevo_nuevo" class="boton azul">Juego Nuevo</button>  
+                </div>
+            </section>
             
         </main>
         <footer>
