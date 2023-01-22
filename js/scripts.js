@@ -127,7 +127,7 @@ seccion_gano_perdio.style.display="flex"
 seccion_inicio.style.display = "none";
 seccion_juego.style.display = "none";
 seccion_nueva_palabra.style.display = "none";
-winloser.textContent = "ganaste" 
+winloser.textContent = "GANASTE!!! FELICITACIONES!!" 
 
     }
 
@@ -140,7 +140,7 @@ function erradas(){
     seccion_inicio.style.display = "none";
     seccion_juego.style.display = "none";
     seccion_nueva_palabra.style.display = "none";
-    winloser.textContent = "PERDISTE" 
+    winloser.textContent = "PERDISTE, ERES UN LOSERRRRR!" 
 
    }
 }
@@ -167,11 +167,12 @@ function funcion_agregar_palabra(){
      console.log(texto);
      if ((nombres.includes(texto))!=true){
         nombres.push(texto);
-
+document.querySelector("#nueva_palabra").value="";
 
      }
+     else  alert("palabra ya ingresada");
     }
 
-    else alert("Por favor, ingrese un mensaje en minúsculas y sin acentos")
+    else alert("Por favor, ingrese una palabra en minúsculas y sin acentos")
     console.log(nombres);
 }
